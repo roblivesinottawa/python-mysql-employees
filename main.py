@@ -51,6 +51,27 @@ def avg_salary_higher_than_120000():
     print("emp_no, avg_salary")
     [print(e) for e in cursor]
 
+def employees_signed_more_than_1():
+    """This function selects all employees who have signed more than one contract after 01-01-2000"""
+    cursor.execute('''
+    SELECT emp_no FROM dept_emp 
+    WHERE from_date > '2000-01-01' 
+    GROUP BY emp_no 
+    HAVING COUNT(from_date) > 1 ORDER BY emp_no''')
+    [print(e) for e in cursor]
+
+def insert_employee():
+    cursor.execute(
+    """
+    INSERT INTO employees
+    (emp_no, birth_date, first_name, last_name, gender, hire_date)
+    VALUES
+    (999904, '1977-09-14', 'John', 'Cree', 'M', '1999-10-01');
+    """
+    )
+    employees_db.commit()
+    print("Inserted employee with emp_no 999903")
+    [print(e) for e in cursor]
 
 if __name__ == "__main__":
     # show_databases()
@@ -58,7 +79,9 @@ if __name__ == "__main__":
     # show_employees()
     # show_employees_by_first_name('Elvis')
     # emps_with_same_salary()
-    avg_salary_higher_than_120000()
+    # avg_salary_higher_than_120000()
+    # employees_signed_more_than_1()
+    insert_employee()
 
 
 
