@@ -75,13 +75,13 @@ def insert_employee():
 
 if __name__ == "__main__":
     # show_databases()
-    # show_tables()
+    show_tables()
     # show_employees()
     # show_employees_by_first_name('Elvis')
     # emps_with_same_salary()
     # avg_salary_higher_than_120000()
     # employees_signed_more_than_1()
-    insert_employee()
+    # insert_employee()
 
 
 
