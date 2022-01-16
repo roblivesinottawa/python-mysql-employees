@@ -74,7 +74,7 @@ def insert_employee():
     [print(e) for e in cursor]
 
 if __name__ == "__main__":
-    # show_databases()
+    show_databases()
     # show_tables()
     # show_databases()
     # show_tables()
