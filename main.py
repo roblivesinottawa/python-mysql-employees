@@ -74,10 +74,8 @@ def insert_employee():
     [print(e) for e in cursor]
 
 if __name__ == "__main__":
-    # show_databases()
-    # show_tables()
-    # show_databases()
-    # show_tables()
+    show_databases()
+    show_tables()
     # show_employees()
     # show_employees_by_first_name('Elvis')
     # emps_with_same_salary()
